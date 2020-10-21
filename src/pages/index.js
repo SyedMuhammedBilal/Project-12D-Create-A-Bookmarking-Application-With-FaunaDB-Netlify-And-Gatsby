@@ -2,7 +2,6 @@ import React from 'react'
 import { useQuery, useMutation } from '@apollo/client'
 import gql from 'graphql-tag';
 import Loader from '../components/Loader';
-import Header from '../components/Header';
 import Card from '../components/Card';
 import './index.css';
 
