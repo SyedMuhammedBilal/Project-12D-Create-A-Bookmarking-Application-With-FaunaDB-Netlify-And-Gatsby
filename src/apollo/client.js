@@ -7,4 +7,4 @@ export const client = new ApolloClient({
         fetch
     }),
     cache: new InMemoryCache()
-});
+}); 
