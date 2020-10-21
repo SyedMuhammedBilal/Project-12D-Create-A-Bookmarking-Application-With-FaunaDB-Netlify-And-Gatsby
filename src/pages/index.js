@@ -1,6 +1,7 @@
 import React from 'react'
 import { useQuery, useMutation } from '@apollo/client'
 import gql from 'graphql-tag';
+import Loader from '../components/Loader';
 
 const BookMarksQuery = gql`{
     bookmark {
@@ -37,8 +38,8 @@ function Home() {
 
     const { data, loading, error } = useQuery(BookMarksQuery);
     
-    if(loading) return <h1>Loading...</h1>
-    if(error) return <h1>Error</h1>
+    if(loading) return <Loader />
+    if(error) return <h1>Error...</h1>
     console.table(data.bookmark[0].url);
 
     return (
@@ -46,14 +47,14 @@ function Home() {
             <div>
                 <input 
                     type="text" 
-                    placeholder="URL"
+                    placeholder="Site Name"
                     ref={node => 
                         textField=node
                     } 
                 />
                 <input 
                     type="text" 
-                    placeholder="Description"
+                    placeholder="URL"
                     ref={node => 
                         desc=node
                     } 
