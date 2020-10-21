@@ -2,11 +2,14 @@ import React from 'react'
 import { useQuery, useMutation } from '@apollo/client'
 import gql from 'graphql-tag';
 import Loader from '../components/Loader';
+import Header from '../components/Header';
+import Card from '../components/Card';
+import './index.css';
 
 const BookMarksQuery = gql`{
     bookmark {
         url,
-        desc
+        desc,
     }
 }`;
 
@@ -28,7 +31,7 @@ function Home() {
         addBookmark({
             variables: {
                 url: textField.value,
-                desc: desc.value
+                desc: desc.value,
             },
             refetchQueries: [{query: BookMarksQuery}],
         });
@@ -44,32 +47,38 @@ function Home() {
 
     return (
         <div>
-            <div>
-                <input 
-                    type="text" 
-                    placeholder="Site Name"
-                    ref={node => 
-                        textField=node
-                    } 
-                />
-                <input 
-                    type="text" 
-                    placeholder="URL"
-                    ref={node => 
-                        desc=node
-                    } 
-                />
-                <button onClick={addBookMark}>Add</button>
+            {/*<Header />*/}
+            <div className='form'>
+                <form className='Form'>
+                    <h1>BookMark App</h1>
+                    <input 
+                        className='inputBox'
+                        type="text" 
+                        placeholder="Site Name"
+                        ref={node => 
+                            textField=node
+                        } 
+                    />
+                    <input 
+                        className='inputBox'
+                        type="text" 
+                        placeholder="URL"
+                        ref={node => 
+                            desc=node
+                        } 
+                    />
+                    <button className='sign-btn' onClick={addBookMark}>Add</button>
+                </form>
             </div>
+                    <div className='list-head'>
+                       <h1>Bookmark List</h1>
+                    </div>
             <div>
                     {
                         data.bookmark.map((bm, index) => {
                             console.log(bm)
                             return(
-                                <div key={index}>
-                                    <p>{bm.url}</p>
-                                    <p>{bm.desc}</p>
-                                </div>
+                                <Card key={index} desc={bm.url} url={bm.desc} />
                             )
                         })
                     }
