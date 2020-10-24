@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import LinkList from '../components/LinkList'
+import LinkList from '../components/LinkList';
+import LinkForm from '../components/LinkForm';
 import 'bootstrap/dist/css/bootstrap.css';
 
 function Index () {
@@ -23,7 +24,8 @@ function Index () {
     return(
         <div className='container py-5'>
             <h1 className='text-center mb-5'>Bookmark Application</h1>
-            <LinkList links={links} />
+            <LinkForm refreshLinks={loadLinks} />
+            <LinkList links={links} refreshLinks={loadLinks} />
         </div>
     )
 }
