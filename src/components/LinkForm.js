@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './Form.css'
 
 function LinkForm({ refreshLinks }) {
 
@@ -28,8 +29,8 @@ function LinkForm({ refreshLinks }) {
     };
 
     return (
-        <div className="card">
-            <div className="card-header">Add Bookmark</div>
+        <div>
+            {/*<div style={{background: '#242424', color: 'white', justifyContent: 'center', alignItems: 'center'}} className="card-header">Add Bookmark</div>
             <div className="card-body">
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
@@ -37,7 +38,7 @@ function LinkForm({ refreshLinks }) {
                         <input
                             type="text"
                             name="name"
-                            className="form-control"
+                            className="form-control neumorphism-2"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                         />
@@ -47,7 +48,7 @@ function LinkForm({ refreshLinks }) {
                         <input
                             type="text"
                             name="url"
-                            className="form-control"
+                            className="form-control neumorphism-2"
                             value={url}
                             onChange={(e) => setUrl(e.target.value)}
                         />
@@ -56,7 +57,7 @@ function LinkForm({ refreshLinks }) {
                         <label htmlFor="description">Description</label>
                         <textarea
                             name="description"
-                            className="form-control"
+                            className="form-control neumorphism-2"
                             value={description}
                             onChange={(e) => setDescription(e.target.value)}
                         />
@@ -65,7 +66,29 @@ function LinkForm({ refreshLinks }) {
                         Add
                     </button>
                 </form>
-            </div>
+            </div>*/}
+            <form className="Form container" onSubmit={handleSubmit}>
+              <h1>Add your Bookmark</h1>
+                <input
+                  className='inputBox'
+                  placeholder='Name...'
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                ></input>
+                <input
+                  className='inputBox'
+                  placeholder='Url'
+                  value={url}
+                  onChange={(e) => setUrl(e.target.value)}
+                ></input>
+                <input
+                  className='inputBox'
+                  placeholder='Description'
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                ></input>
+              <button className="sign-btn" type="submit">Add</button>
+            </form>
         </div>
     )
 }

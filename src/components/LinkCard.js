@@ -1,4 +1,5 @@
 import React from 'react'
+import './Card.css'
 
 function LinkCard({ link, refreshLinks }) {
 
@@ -29,20 +30,19 @@ function LinkCard({ link, refreshLinks }) {
     };
 
     return (
-        <div className='card'>
-            <div className='card-header'>
-                {link.name}
+        <div className="neumorphism-1" style={{borderRadius: '9px'}}>
+            <div style={{background: '#EBECF0'}} className='card-header'>
+                <h2>Name: {link.name}</h2>   
             </div>
             <div className='card-body'>
-                <a href={link.url}>{link.url}</a>
-                <p>{link.description}</p>
+                <span>URL: <a href={link.url}>{link.url}</a></span>
+                <p>DESCRIPTION: {link.description}</p>
             </div>
-            <div className='card-footer'>
-                <button className="btn btn-warning mr-2" onClick={archiveLink}>
-                    Hide
+            <div style={{background: '#EBECF0'}} className='card-footer text-center'>
+                <button style={{borderRadius: '14px'}} className="btn btn-success mr-5" onClick={archiveLink}>
+                    Opened
                 </button>
-                
-                <button className="btn btn-danger" onClick={deleteLink}>
+                <button style={{borderRadius: '14px'}} className="btn btn-danger" onClick={deleteLink}>
                     Delete
                 </button>
             </div>

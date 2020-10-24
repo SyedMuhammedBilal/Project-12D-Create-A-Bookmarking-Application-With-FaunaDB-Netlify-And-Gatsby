@@ -4,7 +4,7 @@ import LinkCard from './LinkCard';
 function LinkList({ links, refreshLinks }) {
     return (
         <div>
-            <h2 className='my-4'>Bookmarks</h2>
+            <h2 className='my-4'>Your Bookmarks</h2>
             {
                 links && links.filter(link => !link.archived).map(link => ( 
                     <LinkCard 
@@ -14,7 +14,8 @@ function LinkList({ links, refreshLinks }) {
                     />
                 ))
             }
-            <h2 className='my-4'>Hidden Links</h2>
+            <br />
+            <h2 className='my-4'>Opened Links</h2>
             {
                 links && links.filter(link => link.archived).map(link => ( 
                     <LinkCard 

@@ -1,0 +1,210 @@
+.neumorphism-2 {
+    margin: 50px;
+	height: 250px;
+	width: 250px;
+	background: #EBECF0;
+	border-radius: 5px;
+    box-shadow: inset -3px -3px 7px #ffffffb0, inset 3px 3px 5px rgba(94, 104, 121, 0.692);
+}
+
+.neumorphism-1 {
+	background: #EBECF0;
+	border-radius: 5px;
+    box-shadow: -3px -3px 7px #ffffffb2, 3px 3px 5px rgba(94, 104, 121, 0.945);
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    min-height: 90vh;
+  }
+  
+  .form h1 {
+    color: #4e4e4e;
+    text-transform: uppercase;
+    letter-spacing: 4px; 
+  }
+  
+  .Form {
+    flex-direction: column;
+    position: relative;
+    display: flex;
+    width: 50%;
+    padding: 40px 40px 60px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #EBECF0;
+    box-shadow:  3px 3px 5px #BABECC,  -5px -5px 10px #FFF;
+  }
+  
+  @media (max-width: 437px) {
+    .Form {
+        width: 320px;
+    }
+    .Form h1 {
+        font-size: 27px;
+        letter-spacing: 1px;
+    }
+  }
+  
+  @media (max-width: 414px) {
+    .Form {
+        width: 383px !important;
+    }
+    .Form h1 {
+        font-size: 25px !important;
+        letter-spacing: 1px;
+    }
+    .Form .inputBox {
+        height: 42px !important;
+        margin-top: 24px !important;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .Form {
+        width: 340px !important;
+    }
+    .Form h1 {
+        font-size: 24px !important;
+        letter-spacing: 1px;
+    }
+    .Form .inputBox {
+        height: 40px !important;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .Form {
+        width: 255px;
+    }
+    .Form h1 {
+        font-size: 21px;
+        letter-spacing: 0.5px;
+    }
+    .Form .inputBox {
+        height: 43px;
+        margin-top: 27px;
+        font-size: 16px;
+    }
+    .Form .sign-btn {
+        height: 43px;
+        margin-top: 28px;
+        font-size: 17px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .Form {
+        width: 335px;
+    }
+    .Form h1 {
+        font-size: 28px;
+    }
+    .Form .inputBox {
+        height: 52px;
+    }
+    .Form .sign-btn {
+        height: 52px;   
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .Form {
+        width: 435px;
+    }
+    .Form h1 {
+        font-size: 38px;
+    }
+    .Form .inputBox {
+        height: 62px;
+        font-size: 21px;
+    }
+    .Form .sign-btn {
+        height: 62px; 
+        font-size-adjust: 23px;  
+    }
+  }
+  
+  .mobil {
+  }
+  
+  @media (max-width: 375px) {
+    .mobil {
+    }
+  }
+  
+  @media (max-width: 414px) {
+    .mobil {
+    }
+  }
+  
+  .Form h1 {
+    color: #2b2b2b;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  
+  .Form .inputBox {
+    margin-top: 20px;  
+    height: 50px;
+    background-color: #EBECF0;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    padding: 5px 15px;
+    color: #fff;
+    font-size: 18px;
+    color: #03a9f4;
+    box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
+  }
+  
+  .Form .sign-btn {
+    margin-top: 20px;  
+    width: 100%;
+    height: 50px;
+    background: #131419;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    padding: 5px 15px;
+    color: #fff;
+    font-size: 18px;
+    color: #03a9f4;
+    box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.1),
+                2px 2px 6px rgba(0, 0, 0, 0.8);
+  }
+  
+  .Form .sign-btn:active {
+    margin-top: 20px;  
+    width: 100%;
+    height: 50px;
+    background: #131419;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    padding: 5px 15px;
+    color: #006c9c;
+    font-size: 18px;
+    color: #03a9f4;
+    box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.1),
+                inset 2px 2px 6px rgba(0, 0, 0, 0.8);
+  }
+  
+  .Form .inputBox::placeholder {
+    color: #555;
+    font-size: 18px;
+  }
+  
+  .forget {
+    margin-top: 30px;
+    color: #555;
+  }
+  
+  .forget i {
+    color: #ff0047;
+    cursor: pointer;
+  }
+  
